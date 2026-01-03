@@ -3,7 +3,7 @@
 	"id": "disable-elytra-flight",
 	"version": "${version}",
 	"name": "Disable Elytra Flight",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "Disables Elytra Flight",
 	"authors": [
 		"Me!"
 	],
