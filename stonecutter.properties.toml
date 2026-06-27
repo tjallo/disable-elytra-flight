@@ -1,5 +1,5 @@
 # See https://stonecutter.kikugie.dev/wiki/config/properties#centralized-properties
-mod.id = "disable-elytra-flight"
+mod.id = "disable_elytra_flight"
 mod.name = "Disable Elytra Flight"
 mod.group = "tjallo.disableelytraflight"
 mod.version = "1.0.0"

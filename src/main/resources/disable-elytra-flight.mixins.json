@@ -3,7 +3,8 @@
   "package": "tjallo.disableelytraflight.mixin",
   "compatibilityLevel": "${java}",
   "mixins": [
-    "LivingEntityMixin"
+    "LivingEntityMixin",
+    "PlayerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

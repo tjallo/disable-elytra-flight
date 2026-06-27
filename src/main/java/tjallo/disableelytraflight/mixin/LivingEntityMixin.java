@@ -12,22 +12,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
+    //? if >=1.21.11 {
+    /*@Unique private long lastMessageTime = 0;
+    @Unique private static final long MESSAGE_COOLDOWN_MS = 2000;
+    *///?}
 
-    @Unique
-    private long lastMessageTime = 0;
-
-    @Unique
-    private static final long MESSAGE_COOLDOWN_MS = 2000;
-
-    @Inject(method = "canGlide", at = @At("HEAD"), cancellable = true)
+    //? if >=1.21.11 && <26.2 {
+    /*@Inject(method = "canGlide", at = @At("HEAD"), cancellable = true)
     private void disableElytraFlight(CallbackInfoReturnable<Boolean> cir) {
         LivingEntity self = (LivingEntity) (Object) this;
         Level level = self.level();
-
-        if (level.dimension() == Level.END) {
-            return;
-        }
-
+        if (level.dimension() == Level.END) { return; }
         if (self instanceof Player player) {
             long currentTime = System.currentTimeMillis();
             if (currentTime - lastMessageTime > MESSAGE_COOLDOWN_MS) {
@@ -40,7 +35,26 @@ public abstract class LivingEntityMixin {
                 }
             }
         }
-
         cir.setReturnValue(false);
     }
+    *///?} else if >=26.2 {
+    /*@Inject(method = "canGlide", at = @At("HEAD"), cancellable = true)
+    private void disableElytraFlight(CallbackInfoReturnable<Boolean> cir) {
+        LivingEntity self = (LivingEntity) (Object) this;
+        Level level = self.level();
+        if (level.dimension() == Level.END) { return; }
+        if (self instanceof Player player) {
+            long currentTime = System.currentTimeMillis();
+            if (currentTime - lastMessageTime > MESSAGE_COOLDOWN_MS) {
+                if (!player.onGround() && !player.isInWater()) {
+                    player.sendOverlayMessage(
+                            Component.literal("§c§lElytra flight is disabled outside The End!")
+                    );
+                    lastMessageTime = currentTime;
+                }
+            }
+        }
+        cir.setReturnValue(false);
+    }
+    *///?}
 }

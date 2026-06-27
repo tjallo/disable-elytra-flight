@@ -35,7 +35,7 @@ neoForge {
     version = property("deps.neo_loader") as String
 
     mods {
-        register("disable-elytra-flight") {
+        register("disable_elytra_flight") {
             sourceSet(sourceSets.main.get())
         }
     }
