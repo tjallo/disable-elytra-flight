@@ -3,26 +3,22 @@
   "id": "${id}",
   "version": "${version}",
   "name": "${name}",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Disables Elytra flight outside The End",
   "authors": [
-    "Me!"
+    "Tjalle"
   ],
-  "contact": {
-    "homepage": "https://stonecutter.kikugie.dev/",
-    "sources": "https://codeberg.org/stonecutter/template-fabric"
-  },
   "license": "CC0-1.0",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/disable-elytra-flight/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.TemplateModFabric"
+      "tjallo.disableelytraflight.DisableElytraFlightFabric"
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "disable-elytra-flight.mixins.json"
   ],
-  "accessWidener": "template.ct",
+  "accessWidener": "disable-elytra-flight.ct",
   "depends": {
     "fabricloader": ">=0.17",
     "minecraft": "${minecraft}"

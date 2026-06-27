@@ -1,8 +1,8 @@
 # See https://stonecutter.kikugie.dev/wiki/config/properties#centralized-properties
-mod.id = "template"
-mod.name = "Template"
-mod.group = "com.example"
-mod.version = "0.1.0"
+mod.id = "disable-elytra-flight"
+mod.name = "Disable Elytra Flight"
+mod.group = "tjallo.disableelytraflight"
+mod.version = "1.0.0"
 
 deps.fabric_loader = "0.19.3"
 loomx.loom_version = "1.17-SNAPSHOT"

@@ -7,15 +7,13 @@ loaderVersion="[1,)"
 modId = "${id}"
 displayName = "${name}"
 version = "${version}"
-authors = "Me!"
-description = "This is an example description! Tell everyone what your mod is about!"
+authors = "Tjalle"
+description = "Disables Elytra flight outside The End"
 
-logoFile = "assets/template/icon.png"
-#displayURL = "..."
-#issueTrackerUrl = "..."
+logoFile = "assets/disable-elytra-flight/icon.png"
 
-[[mixings]]
-config = "template.mixins.json"
+[[mixins]]
+config = "disable-elytra-flight.mixins.json"
 
 [[dependencies.${id}]]
 modId = "minecraft"

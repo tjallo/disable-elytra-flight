@@ -1,9 +1,9 @@
 {
   "required": true,
-  "package": "com.example.mixin",
+  "package": "tjallo.disableelytraflight.mixin",
   "compatibilityLevel": "${java}",
   "mixins": [
-    "ExampleMixin"
+    "LivingEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
