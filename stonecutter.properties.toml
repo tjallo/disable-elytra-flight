@@ -2,7 +2,7 @@
 mod.id = "disable_elytra_flight"
 mod.name = "Disable Elytra Flight"
 mod.group = "tjallo.disableelytraflight"
-mod.version = "1.0.0"
+mod.version = "2.0.0"
 
 deps.fabric_loader = "0.19.3"
 loomx.loom_version = "1.17-SNAPSHOT"
